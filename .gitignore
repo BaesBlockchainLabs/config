@@ -1,2 +1,6 @@
 *~
 *.old
+*.log
+write-*
+node_key.json
+priv_validator.json
