@@ -91,7 +91,7 @@ seeds = ""
 
 # Comma separated list of nodes to keep persistent connections to
 # Do not add private peers to this list if you don't want them advertised
-persistent_peers = "83f6c8f0adb51b1bfbc93b47c5cf1590ea16d4ef@poc.exuniversitas.com:26656,ca59d22075a8b9b9aa58e7062161e7b58220e74e@baes3.hopto.org:26656"
+persistent_peers ="83f6c8f0adb51b1bfbc93b47c5cf1590ea16d4ef@poc.exuniversitas.com:26656,05092aa8c4d47674154289c437222b7f9c389209@176.9.2.252:26656"
 
 # UPNP port forwarding
 upnp = true
