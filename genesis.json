@@ -24,7 +24,7 @@
         "type": "tendermint/PubKeyEd25519",
         "value": "mNgnJqwTwHtO3+Tn4HJ5MmryZzSQD5y/wWUq/6sJ/8M="
       },
-      "power": "10",
+      "power": "30",
       "name": "martianoids-01"
     },
         {
