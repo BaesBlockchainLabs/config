@@ -1,4 +1,12 @@
 #!/bin/bash
+
+#################
+# ATENCION:
+# Es posible que la orden 'tendermint init', hacia el final del script, dé este error:
+#   Error reading PrivValidator from /home/*/.tendermint/config/priv_validator.json: unrecognized concrete type name AC26791624DE60
+# Es debido a que si el fichero (que contiene la clave del nodo como validador) se generó con una versión antigua de tendermint, hay que actualizar
+# el formato del campo pub_key.type, cambiando "AC26791624DE60" por "tendermint/PubKeyEd25519". Esto antes de ejecutar el script.
+################
 #
 ######################################
 # OS update
