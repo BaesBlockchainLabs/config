@@ -11,6 +11,28 @@ BDB_VERSION="2.0.0b6"
 ################
 #
 ######################################
+#
+######################################
+#
+OS_VENDOR=`lsb_release -s -i`
+OS_VERSION=`lsb_release -s -r`
+
+if [ "$OS_VENDOR" != "Ubuntu" ]; then
+  echo "You need a modern ubuntu distribution ( >= 18.04) to install the node"
+  exit
+fi
+
+case $OS_VERSION in
+18.04)
+    echo "Version of ubuntu is 18.04 ok"
+    ;;
+*)
+    echo "Version of Ubuntu $OS_VERSION is not tested"
+    exit
+esac
+
+echo "Vendor: $OS_VENDOR  Release: $OS_VERSION"
+######################################
 # OS update
 ######################################
 sudo apt update
