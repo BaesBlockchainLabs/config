@@ -1,6 +1,6 @@
 {
   "genesis_time": "2018-08-20T16:33:51.07302404Z",
-  "chain_id": "baes-chain-v2",
+  "chain_id": "baes-chain-v3",
   "consensus_params": {
     "block_size_params": {
       "max_bytes": "22020096",

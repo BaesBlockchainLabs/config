@@ -1,6 +1,8 @@
 #!/bin/bash
 TM_VERSION="0.22.8"
-BDB_VERSION="2.0.0b6"
+BDB_VERSION="2.0.0b7"
+
+TM_FILE=v$TM_VERSION/tendermint_"$TM_VERSION"_linux_amd64.zip
 
 #################
 # ATENCION:
@@ -58,9 +60,14 @@ sudo pip3 install bigchaindb==$BDB_VERSION
 #######################################
 # Install required tendermint version
 #######################################
-wget https://github.com/tendermint/tendermint/releases/download/v$TM_VERSION/tendermint_"$TM_VERSION"_linux_amd64.zip
-unzip tendermint_"$TM_VERSION"_linux_amd64.zip
-rm tendermint_"$TM_VERSION"_linux_amd64.zip
+
+if [ ! -f $TM_FILE ]; then
+    echo "Downloading tendermint!"
+    wget https://github.com/tendermint/tendermint/releases/download/$TM_FILE
+
+fi
+
+unzip $TM_FILE
 sudo mv tendermint /usr/local/bin
 #
 ######################################
