@@ -2,7 +2,7 @@
 TM_VERSION="0.22.8"
 BDB_VERSION="2.0.0b7"
 
-TM_FILE=v$TM_VERSION/tendermint_"$TM_VERSION"_linux_amd64.zip
+TM_FILE=tendermint_"$TM_VERSION"_linux_amd64.zip
 
 #################
 # ATENCION:
@@ -63,7 +63,7 @@ sudo pip3 install bigchaindb==$BDB_VERSION
 
 if [ ! -f $TM_FILE ]; then
     echo "Downloading tendermint!"
-    wget https://github.com/tendermint/tendermint/releases/download/$TM_FILE
+    wget https://github.com/tendermint/tendermint/releases/download/v$TM_VERSION/$TM_FILE
 
 fi
 
