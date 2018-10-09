@@ -90,17 +90,16 @@ external_address = ""
 seeds = ""
 
 # Comma separated list of nodes to keep persistent connections to
-# Do not add private peers to this list if you don't want them advertised
-persistent_peers ="83f6c8f0adb51b1bfbc93b47c5cf1590ea16d4ef@poc.exuniversitas.com:26656,05092aa8c4d47674154289c437222b7f9c389209@176.9.2.252:26656"
+persistent_peers = "cad69ab7db6d64c89eb2470ec8ee0319523f6feb@poc.exuniversitas.com:26656,837917007743fe0d30247726b2ffc07a6276fc1f@bdb-1.martianoids.com:26656,05a8a4989213ed9cc8ef91bdc1e33dc2a212b1c5@node2:26656,0376d1af53f057f57ca57b1d24a979f315a23ed0@node3:26656"
 
 # UPNP port forwarding
-upnp = true
+upnp = false
 
 # Path to address book
 addr_book_file = "config/addrbook.json"
 
 # Set true for strict address routability rules
-addr_book_strict = true
+addr_book_strict = false
 
 # Time to wait before flushing messages out on the connection, in ms
 flush_throttle_timeout = 100
@@ -112,10 +111,10 @@ max_num_peers = 50
 max_packet_msg_payload_size = 1024
 
 # Rate at which packets can be sent, in bytes/second
-send_rate = 512000
+send_rate = 5120000
 
 # Rate at which packets can be received, in bytes/second
-recv_rate = 512000
+recv_rate = 5120000
 
 # Set true to enable the peer-exchange reactor
 pex = true

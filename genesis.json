@@ -1,42 +1,39 @@
 {
-  "genesis_time": "2018-08-20T16:33:51.07302404Z",
-  "chain_id": "baes-chain-v3",
-  "consensus_params": {
-    "block_size_params": {
-      "max_bytes": "22020096",
-      "max_txs": "10000",
-      "max_gas": "-1"
-    },
-    "tx_size_params": {
-      "max_bytes": "10240",
-      "max_gas": "-1"
-    },
-    "block_gossip_params": {
-      "block_part_size_bytes": "65536"
-    },
-    "evidence_params": {
-      "max_age": "100000"
-    }
-  },
+  "genesis_time": "2018-10-09T19:24:17.990191523Z",
+  "chain_id": "chain-baes-mainnet",
   "validators": [
     {
       "pub_key": {
         "type": "tendermint/PubKeyEd25519",
-        "value": "mNgnJqwTwHtO3+Tn4HJ5MmryZzSQD5y/wWUq/6sJ/8M="
+        "value": "ErR0WzL/Z/VtAI/mAPCKrkUH6gf7J+EncSDoZZ2H9y4="
       },
-      "power": "30",
-      "name": "martianoids-01"
+      "power": "1",
+      "name": "node0"
     },
-        {
+    {
       "pub_key": {
         "type": "tendermint/PubKeyEd25519",
-        "value": "CGsFtbl8D7fCgdWnYWTQKvofqAheHHS/JTFnhLAoSEM="
+        "value": "k9ahioAG+5QmYmnrivR6s8aTqt+GfmFUVxXrHZXRFVA="
       },
-      "power": "10",
-      "name": "ua-01"
+      "power": "1",
+      "name": "node1"
+    },
+    {
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "7f3basrnIoAjJqD8R/ydSMALtz1ifxZvssssq1Y4fdo="
+      },
+      "power": "1",
+      "name": "node2"
+    },
+    {
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "Y9cUP/LDT9NrDvQq/exenIDrhSRNBMeyg+6zRIi/Y/s="
+      },
+      "power": "1",
+      "name": "node3"
     }
-    
-
   ],
   "app_hash": ""
 }
