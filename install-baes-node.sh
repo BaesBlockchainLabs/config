@@ -73,7 +73,12 @@ sudo mv tendermint /usr/local/bin
 ######################################
 # configure and init bigchaindb
 ######################################
-bigchaindb configure
+if [ ! -f $HOME/.bigchaindb ]; then
+    echo "Configuring BigchainDB!"
+    bigchaindb configure
+fi
+
+
 bigchaindb drop
 bigchaindb init
 #
@@ -82,15 +87,21 @@ bigchaindb init
 # and genesis from repo and reset
 # to genesis state
 ######################################
+
+
+
 mkdir -p  ~/.tendermint/config
 pushd ~/.tendermint/config
 rm -f genesis.json
 rm -f config.toml
 wget https://raw.githubusercontent.com/BaesBlockchainLabs/config/master/genesis.json
-wget https://raw.githubusercontent.com/BaesBlockchainLabs/config/master/config.toml
+wget https://raw.githubusercontent.com/BaesBlockchainLabs/config/master/config-template.toml
 tendermint init
 tendermint unsafe_reset_all
+MONIKER=$('hostname')
+echo $MONIKER
 popd
+
 #
 ######################################
 # configure and start monit
