@@ -1,7 +1,14 @@
 #!/bin/bash
+
+####################################################
+# NODE_TYPE can be "CLI"  for client node
+#                  "BOOT" for boot node
+#                  "VAL"  for validator node
+####################################################
+NODE_TYPE="CLI" 
+#
 TM_VERSION="0.22.8"
 BDB_VERSION="2.0.0b7"
-
 TM_FILE=tendermint_"$TM_VERSION"_linux_amd64.zip
 
 #################
@@ -73,6 +80,7 @@ sudo mv tendermint /usr/local/bin
 ######################################
 # configure and init bigchaindb
 ######################################
+#
 if [ ! -f $HOME/.bigchaindb ]; then
     echo "Configuring BigchainDB!"
     bigchaindb configure
@@ -100,6 +108,9 @@ tendermint init
 tendermint unsafe_reset_all
 MONIKER=$('hostname')
 echo $MONIKER
+
+sed -e s/__MONIKER__/"$NODE_TYPE"_"$MONIKER"/g config-template.toml > config.toml
+rm config-template.toml
 popd
 
 #
